@@ -269,7 +269,7 @@ const ProductTiersDashboard = () => {
                 </div>
                 <div className="w-full lg:w-1/3">
                     <div className="sticky top-28">
-                        <Card className="h-full flex flex-col justify-center bg-mmc-green text-white">
+                        <Card className="h-full flex flex-col justify-center bg-mmc-green text-mmc-green">
                             <p className="font-display font-semibold text-xl">Comissão Total Estimada</p>
                             <p className="font-display text-6xl font-extrabold my-2">
                                 R$ <CountUp end={totalCommission} duration={0.5} separator="." decimal="," decimals={2} preserveValue />
@@ -283,43 +283,76 @@ const ProductTiersDashboard = () => {
     );
 };
 
+
+
+
+
 const JoinUsCycleSlide = () => {
     const items = [
-        { icon: MapPin, title: "Viaje com a gente", desc: "Conheça nossos produtos e destinos" },
-        { icon: Send, title: "Venda com a gente", desc: "Compartilhe experiências e ganhe comissões" },
-        { icon: TrendingUp, title: "Cresça com a gente", desc: "Evolua nos níveis e aumente seus ganhos" },
-        { icon: Handshake, title: "Transforme vidas", desc: "Proporcione experiências inesquecíveis" },
-    ]
-    return(
+        { 
+            icon: Send, 
+            title: "Venda com a gente", 
+            desc: "Compartilhe experiências e ganhe comissões",
+            position: "top-1/2 -translate-y-1/2 right-0" // Direita
+        },
+        { 
+            icon: TrendingUp, 
+            title: "Cresça com a gente", 
+            desc: "Evolua e aumente seus ganhos",
+            position: "bottom-0 left-1/2 -translate-x-1/2" // Baixo
+        },
+        { 
+            icon: Handshake, 
+            title: "Transforme vidas", 
+            desc: "Proporcione experiências inesquecíveis",
+            position: "top-1/2 -translate-y-1/2 left-0" // Esquerda
+        },
+    ];
+    
+    const centerItem = { 
+        icon: MapPin, 
+        title: "Viaje com a gente", 
+        desc: "Conheça nossos produtos e destinos" 
+    };
+
+    const CenterIcon = centerItem.icon;
+
+    return (
         <motion.div variants={contentVariants} className="text-center">
-            <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-12">Junte-se a Nós!</motion.h1>
-            <div className="relative flex items-center justify-center" style={{height: '450px'}}>
-                 <motion.div 
-                    variants={itemVariants} 
-                    className="absolute w-64 h-64 border-8 border-mmc-green/80 rounded-full flex items-center justify-center"
-                 >
-                     <RefreshCw className="w-16 h-16 text-white/80 animate-spin" style={{ animationDuration: '20s' }}/>
-                 </motion.div>
-                 
-                 {items.map((item, i) => {
-                     const angle = (i * 90) - 45;
-                     return(
-                         <motion.div 
-                            key={i} 
+            <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-16">
+                Junte-se a Nós!
+            </motion.h1>
+            <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center" style={{ height: '400px' }}>
+
+                {/* Item Central */}
+                <motion.div variants={itemVariants} className="absolute text-center z-10">
+                     <CenterIcon className="w-16 h-16 text-mmc-green mx-auto"/>
+                     <h3 className="font-display text-2xl font-bold text-white mt-2">{centerItem.title}</h3>
+                     <p className="text-light-gray/80 text-sm max-w-[220px]">{centerItem.desc}</p>
+                </motion.div>
+
+                {/* Itens ao Redor */}
+                {items.map((item, i) => {
+                    const ItemIcon = item.icon;
+                    return (
+                        <motion.div 
+                            key={item.title}
                             variants={itemVariants}
-                            className="absolute" 
-                            style={{transform: `rotate(${angle}deg) translate(250px) rotate(-${angle}deg)`}}
-                         >
-                            <div className="flex items-center space-x-4 w-64">
-                                <item.icon className="w-12 h-12 text-mmc-green flex-shrink-0"/>
-                                <div className="text-left">
-                                    <h3 className="font-display text-xl font-bold text-white">{item.title}</h3>
-                                    <p className="text-light-gray/80">{item.desc}</p>
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.4 + i * 0.2 }}
+                            className={`absolute ${item.position}`}
+                        >
+                            <div className="flex items-center space-x-4 w-64 text-left">
+                                <ItemIcon className="w-12 h-12 text-mmc-green flex-shrink-0"/>
+                                <div>
+                                   <h3 className="font-display text-xl font-bold text-white">{item.title}</h3>
+                                   <p className="text-light-gray/80">{item.desc}</p>
                                 </div>
                             </div>
-                         </motion.div>
-                     )
-                 })}
+                        </motion.div>
+                    )
+                })}
             </div>
         </motion.div>
     );
