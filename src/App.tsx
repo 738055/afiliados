@@ -49,27 +49,27 @@ const Card = ({ children, className = "" }) => (
 // --- SLIDE COMPONENTS DEFINITION ---
 
 const CoverSlide = () => (
-    <motion.div variants={contentVariants} className="text-center flex flex-col items-center justify-center h-full">
-        <motion.h1 variants={itemVariants} className="font-display text-5xl md:text-7xl font-bold text-white leading-tight" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>Programa de Afiliados</motion.h1>
-        <motion.h2 variants={itemVariants} className="font-display text-4xl md:text-5xl font-extrabold text-mmc-green mt-2">MMC RECEPTIVO</motion.h2>
-        <motion.div variants={itemVariants} className="w-24 h-1 bg-mmc-green my-8 rounded-full" />
-        <motion.p variants={itemVariants} className="max-w-3xl text-lg md:text-xl text-light-gray" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>Indique experiências turísticas incríveis e ganhe comissões a cada venda.</motion.p>
+    <motion.div variants={contentVariants} className="text-center flex flex-col items-center justify-center h-full p-4">
+        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>Programa de Afiliados</motion.h1>
+        <motion.h2 variants={itemVariants} className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-mmc-green mt-2">MMC RECEPTIVO</motion.h2>
+        <motion.div variants={itemVariants} className="w-24 h-1 bg-mmc-green my-6 md:my-8 rounded-full" />
+        <motion.p variants={itemVariants} className="max-w-3xl text-base sm:text-lg md:text-xl text-light-gray" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>Indique experiências turísticas incríveis e ganhe comissões a cada venda.</motion.p>
     </motion.div>
 );
 
 const IntroSlide = () => (
-    <motion.div variants={contentVariants} className="text-center max-w-4xl mx-auto">
-        <motion.h1 variants={itemVariants} className="font-display text-4xl md:text-5xl font-bold text-white mb-6">Seja um Parceiro de Sucesso MMC</motion.h1>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray mb-4">A <span className="font-semibold text-mmc-green">MMC Receptivo</span>, especialista em criar momentos inesquecíveis nos principais destinos do Brasil, convida você para uma parceria de crescimento mútuo.</motion.p>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray">Transforme sua influência e suas indicações em uma fonte de renda, oferecendo o melhor do turismo nacional.</motion.p>
+    <motion.div variants={contentVariants} className="text-center max-w-4xl mx-auto p-4">
+        <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Seja um Parceiro de Sucesso MMC</motion.h1>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-4">A <span className="font-semibold text-mmc-green">MMC Receptivo</span>, especialista em criar momentos inesquecíveis nos principais destinos do Brasil, convida você para uma parceria de crescimento mútuo.</motion.p>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray">Transforme sua influência e suas indicações em uma fonte de renda, oferecendo o melhor do turismo nacional.</motion.p>
     </motion.div>
 );
 
 const WhyMmcSlide = () => (
-    <motion.div variants={contentVariants} className="text-center">
-        <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-4">Por que escolher a MMC?</motion.h1>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray mb-12">Credibilidade, qualidade e uma parceria que valoriza seu trabalho.</motion.p>
-        <div className="grid md:grid-cols-3 gap-8 text-left">
+    <motion.div variants={contentVariants} className="text-center p-4">
+        <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Por que escolher a MMC?</motion.h1>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-12">Credibilidade, qualidade e uma parceria que valoriza seu trabalho.</motion.p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <Card>
                 <Award className="w-10 h-10 text-mmc-green mb-4" />
                 <h3 className="font-display text-xl font-bold mb-2">Marca de Confiança</h3>
@@ -90,10 +90,10 @@ const WhyMmcSlide = () => (
 );
 
 const DestinationsSlide = () => (
-    <motion.div variants={contentVariants} className="text-center">
-        <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-4">Destinos Incríveis para Promover</motion.h1>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray mb-12">Divulgue experiências nos locais mais desejados do Brasil.</motion.p>
-        <div className="grid md:grid-cols-3 gap-8">
+    <motion.div variants={contentVariants} className="text-center p-4">
+        <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Destinos Incríveis para Promover</motion.h1>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-12">Divulgue experiências nos locais mais desejados do Brasil.</motion.p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div variants={itemVariants} whileHover={{y: -10, scale: 1.03}} className="relative rounded-xl overflow-hidden group shadow-2xl">
                 <img src="https://images.pexels.com/photos/164543/pexels-photo-164543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foz do Iguaçu" className="w-full h-80 object-cover"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -110,7 +110,7 @@ const DestinationsSlide = () => (
                     <p className="text-light-gray/90">Charme Europeu e Gastronomia.</p>
                 </div>
             </motion.div>
-            <motion.div variants={itemVariants} whileHover={{y: -10, scale: 1.03}} className="relative rounded-xl overflow-hidden group shadow-2xl">
+            <motion.div variants={itemVariants} whileHover={{y: -10, scale: 1.03}} className="relative rounded-xl overflow-hidden group shadow-2xl sm:col-span-2 lg:col-span-1">
                 <img src="https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Rio de Janeiro" className="w-full h-80 object-cover"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
@@ -123,78 +123,29 @@ const DestinationsSlide = () => (
 );
 
 const HowItWorksDashboardSlide = () => {
-    const centralPoint = { x: 300, y: 225 };
-    const radiusX = 280;
-    const radiusY = 180;
     const steps = [
         { icon: PenSquare, title: "Cadastre-se" },
         { icon: LinkIcon, title: "Receba seu Link" },
         { icon: Users, title: "Divulgue" },
         { icon: BarChart2, title: "Acompanhe" },
         { icon: DollarSign, title: "Receba" },
-    ].map((step, i, arr) => {
-        const angle = (i / arr.length) * 2 * Math.PI - Math.PI / 2;
-        return { ...step, x: centralPoint.x + Math.cos(angle) * radiusX, y: centralPoint.y + Math.sin(angle) * radiusY };
-    });
-
-    const pathVariants = {
-        hidden: { pathLength: 0, opacity: 0 },
-        visible: i => ({
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                pathLength: { delay: i * 0.7, type: "spring", duration: 1.5, bounce: 0 },
-                opacity: { delay: i * 0.7, duration: 0.01 }
-            }
-        })
-    };
-
+    ];
     return (
-        <motion.div variants={contentVariants} className="text-center">
-            <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-12">O Ciclo de Sucesso do Afiliado</motion.h1>
-            <div className="relative w-full h-96 flex items-center justify-center">
-                <svg className="absolute w-full h-full" viewBox="0 0 600 450">
-                    <g>
-                        {steps.map((step, i) => {
-                            const prevStep = steps[i - 1] || { x: centralPoint.x, y: centralPoint.y };
-                            return (
-                             <motion.path
-                                key={i}
-                                d={`M ${prevStep.x} ${prevStep.y} L ${step.x} ${step.y}`}
-                                fill="none"
-                                stroke="#28a745"
-                                strokeWidth="2"
-                                strokeDasharray="4 4"
-                                variants={pathVariants}
-                                initial="hidden"
-                                animate="visible"
-                                custom={i}
-                             />
-                            )
-                        })}
-                    </g>
-                </svg>
-
-                <motion.div variants={itemVariants} className="absolute w-56 h-56 bg-white/10 rounded-full flex flex-col items-center justify-center text-center backdrop-blur-sm border border-white/20">
-                    <Users className="w-12 h-12 text-mmc-green mb-2"/>
-                    <h3 className="font-display text-2xl font-bold text-white">VOCÊ</h3>
-                    <p className="text-light-gray/80">Nosso Parceiro</p>
-                </motion.div>
-
+        <motion.div variants={contentVariants} className="text-center p-4">
+            <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-12">O Ciclo de Sucesso do Afiliado</motion.h1>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
                 {steps.map((step, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5 + i * 0.7 }}
-                        style={{ x: step.x - centralPoint.x, y: step.y - centralPoint.y }}
-                    >
-                        <div className="w-24 h-24 bg-mmc-green/80 backdrop-blur-sm text-white rounded-full flex flex-col items-center justify-center text-center p-2 border-2 border-white/50">
-                            <step.icon size={28}/>
-                            <p className="text-xs font-semibold mt-1">{step.title}</p>
-                        </div>
-                    </motion.div>
+                    <React.Fragment key={i}>
+                        <motion.div variants={itemVariants} className="flex flex-col items-center text-center">
+                            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-mmc-green/80 text-white rounded-full flex items-center justify-center border-2 border-white/50">
+                                <step.icon size={32} />
+                            </div>
+                            <p className="font-display text-sm sm:text-base font-semibold text-white mt-2">{step.title}</p>
+                        </motion.div>
+                        {i < steps.length - 1 && (
+                            <motion.div variants={itemVariants} className="h-8 w-px md:h-px md:w-12 bg-mmc-green/70"></motion.div>
+                        )}
+                    </React.Fragment>
                 ))}
             </div>
         </motion.div>
@@ -238,9 +189,9 @@ const ProductTiersDashboard = () => {
     }, 0);
 
     return (
-        <motion.div variants={contentVariants} className="text-center">
-            <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-4">Simulador de Comissão por Produto</motion.h1>
-            <motion.p variants={itemVariants} className="text-lg text-light-gray mb-8">Adicione produtos de cada nível para simular sua comissão estimada.</motion.p>
+        <motion.div variants={contentVariants} className="text-center p-4">
+            <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Simulador de Comissão por Produto</motion.h1>
+            <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-8">Adicione produtos de cada nível para simular sua comissão estimada.</motion.p>
             <div className="flex flex-col lg:flex-row gap-8">
                 <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {tiers.map((tier, tierIndex) => (
@@ -269,12 +220,12 @@ const ProductTiersDashboard = () => {
                 </div>
                 <div className="w-full lg:w-1/3">
                     <div className="sticky top-28">
-                        <Card className="h-full flex flex-col justify-center bg-mmc-green text-mmc-green">
-                            <p className="font-display font-semibold text-xl">Comissão Total Estimada</p>
-                            <p className="font-display text-6xl font-extrabold my-2">
+                         <Card className="h-full flex flex-col justify-center bg-mmc-green text-white">
+                            <p className="font-display font-semibold text-lg sm:text-xl">Comissão Total Estimada</p>
+                            <p className="font-display text-4xl sm:text-6xl font-extrabold my-2">
                                 R$ <CountUp end={totalCommission} duration={0.5} separator="." decimal="," decimals={2} preserveValue />
                             </p>
-                            <p className="text-xs opacity-80 mt-2">Este é um valor simulado. A comissão final dependerá dos produtos vendidos.</p>
+                            <p className="text-xs opacity-80 mt-2">Valor simulado. A comissão final dependerá dos produtos vendidos.</p>
                         </Card>
                     </div>
                 </div>
@@ -283,86 +234,42 @@ const ProductTiersDashboard = () => {
     );
 };
 
-
-
-
-
 const JoinUsCycleSlide = () => {
+    const centerItem = { icon: MapPin, title: "Viaje com a gente", desc: "Conheça nossos produtos e destinos" };
     const items = [
-        { 
-            icon: Send, 
-            title: "Venda com a gente", 
-            desc: "Compartilhe experiências e ganhe comissões",
-            position: "top-1/2 -translate-y-1/2 right-0" // Direita
-        },
-        { 
-            icon: TrendingUp, 
-            title: "Cresça com a gente", 
-            desc: "Evolua e aumente seus ganhos",
-            position: "bottom-0 left-1/2 -translate-x-1/2" // Baixo
-        },
-        { 
-            icon: Handshake, 
-            title: "Transforme vidas", 
-            desc: "Proporcione experiências inesquecíveis",
-            position: "top-1/2 -translate-y-1/2 left-0" // Esquerda
-        },
+        { icon: Send, title: "Venda com a gente", desc: "Compartilhe e ganhe comissões" },
+        { icon: TrendingUp, title: "Cresça com a gente", desc: "Aumente seus ganhos" },
+        { icon: Handshake, title: "Transforme vidas", desc: "Proporcione experiências" },
     ];
-    
-    const centerItem = { 
-        icon: MapPin, 
-        title: "Viaje com a gente", 
-        desc: "Conheça nossos produtos e destinos" 
-    };
-
-    const CenterIcon = centerItem.icon;
-
-    return (
-        <motion.div variants={contentVariants} className="text-center">
-            <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-16">
-                Junte-se a Nós!
-            </motion.h1>
-            <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center" style={{ height: '400px' }}>
-
-                {/* Item Central */}
-                <motion.div variants={itemVariants} className="absolute text-center z-10">
-                     <CenterIcon className="w-16 h-16 text-mmc-green mx-auto"/>
-                     <h3 className="font-display text-2xl font-bold text-white mt-2">{centerItem.title}</h3>
-                     <p className="text-light-gray/80 text-sm max-w-[220px]">{centerItem.desc}</p>
-                </motion.div>
-
-                {/* Itens ao Redor */}
-                {items.map((item, i) => {
+    return(
+        <motion.div variants={contentVariants} className="text-center p-4">
+            <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-12">Junte-se a Nós!</motion.h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+                 <motion.div variants={itemVariants} className="text-center">
+                    <centerItem.icon className="w-12 h-12 text-mmc-green mx-auto mb-2"/>
+                    <h3 className="font-display text-xl font-bold text-white">{centerItem.title}</h3>
+                    <p className="text-light-gray/80">{centerItem.desc}</p>
+                 </motion.div>
+                 {items.map((item, i) => {
                     const ItemIcon = item.icon;
                     return (
-                        <motion.div 
-                            key={item.title}
-                            variants={itemVariants}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.4 + i * 0.2 }}
-                            className={`absolute ${item.position}`}
-                        >
-                            <div className="flex items-center space-x-4 w-64 text-left">
-                                <ItemIcon className="w-12 h-12 text-mmc-green flex-shrink-0"/>
-                                <div>
-                                   <h3 className="font-display text-xl font-bold text-white">{item.title}</h3>
-                                   <p className="text-light-gray/80">{item.desc}</p>
-                                </div>
-                            </div>
+                        <motion.div key={i} variants={itemVariants} className="text-center">
+                            <ItemIcon className="w-12 h-12 text-mmc-green mx-auto mb-2"/>
+                            <h3 className="font-display text-xl font-bold text-white">{item.title}</h3>
+                            <p className="text-light-gray/80">{item.desc}</p>
                         </motion.div>
                     )
-                })}
+                 })}
             </div>
         </motion.div>
     );
 }
 
 const SupportSlide = () => (
-    <motion.div variants={contentVariants} className="text-center max-w-4xl mx-auto">
-        <motion.h1 variants={itemVariants} className="font-display text-4xl font-bold text-white mb-4">Ferramentas e Suporte para Você</motion.h1>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray mb-12">Nós oferecemos tudo o que você precisa para decolar.</motion.p>
-        <div className="grid md:grid-cols-2 gap-6 text-left">
+    <motion.div variants={contentVariants} className="text-center max-w-4xl mx-auto p-4">
+        <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Ferramentas e Suporte para Você</motion.h1>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-12">Oferecemos tudo o que você precisa para decolar.</motion.p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
             <Card>
                 <BarChart2 className="w-8 h-8 text-mmc-green mb-3"/>
                 <h3 className="font-display font-bold text-lg mb-1">Painel de Afiliado</h3>
@@ -397,15 +304,15 @@ const FAQSlide = () => {
     const [expanded, setExpanded] = useState(null);
 
     return (
-        <motion.div variants={contentVariants} className="max-w-4xl mx-auto">
+        <motion.div variants={contentVariants} className="max-w-4xl mx-auto p-4">
             <motion.div variants={itemVariants} className="text-center mb-12">
-                <h1 className="font-display text-4xl font-bold text-white mb-4">Perguntas Frequentes</h1>
+                <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Perguntas Frequentes</h1>
             </motion.div>
             <motion.div variants={itemVariants} className="space-y-4">
                 {faqs.map((faq, i) => (
                     <Card key={i} className="p-0 overflow-hidden">
                         <motion.button onClick={() => setExpanded(expanded === i ? null : i)} className="w-full flex justify-between items-center p-6 text-left">
-                            <h3 className="font-display text-lg font-semibold text-dark-gray">{faq.q}</h3>
+                            <h3 className="font-display text-base sm:text-lg font-semibold text-dark-gray">{faq.q}</h3>
                             <motion.div animate={{ rotate: expanded === i ? 45 : 0 }} className="flex-shrink-0 ml-4">
                                 <Plus className="w-6 h-6 text-mmc-green"/>
                             </motion.div>
@@ -425,12 +332,12 @@ const FAQSlide = () => {
 };
 
 const CtaSlide = () => (
-    <motion.div variants={contentVariants} className="text-center max-w-3xl mx-auto">
+    <motion.div variants={contentVariants} className="text-center max-w-3xl mx-auto p-4">
         <motion.div variants={itemVariants} className="w-24 h-24 bg-mmc-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
             <Star className="w-12 h-12" fill="currentColor"/>
         </motion.div>
-        <motion.h1 variants={itemVariants} className="font-display text-5xl font-bold text-white mb-6">Junte-se ao nosso time!</motion.h1>
-        <motion.p variants={itemVariants} className="text-lg text-light-gray mb-12">Comece sua jornada como afiliado MMC Receptivo hoje mesmo. O cadastro é rápido, fácil e gratuito.</motion.p>
+        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">Junte-se ao nosso time!</motion.h1>
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-12">Comece sua jornada como afiliado MMC Receptivo hoje mesmo. O cadastro é rápido, fácil e gratuito.</motion.p>
         
         <motion.div variants={itemVariants}>
             <motion.a 
@@ -439,7 +346,7 @@ const CtaSlide = () => (
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block bg-mmc-gold text-dark-gray px-12 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+                className="inline-block bg-mmc-gold text-dark-gray px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 transition-colors shadow-lg"
             >
                 QUERO ME CADASTRAR AGORA
             </motion.a>
@@ -504,28 +411,28 @@ export default function MmcPresentation() {
         </div>
 
         {/* --- UI Controls --- */}
-        <div className="absolute top-6 right-6 z-20 bg-black/30 backdrop-blur-md rounded-full p-2 px-4 text-sm border border-white/10">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 bg-black/30 backdrop-blur-md rounded-full p-2 px-3 sm:px-4 text-xs sm:text-sm border border-white/10">
             <span>{currentSlide + 1} / {slides.length}</span>
         </div>
         
-        <div className="absolute top-6 left-6 z-20">
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
           <button 
             onClick={() => setIsAutoPlay(!isAutoPlay)}
             className="bg-black/30 backdrop-blur-md rounded-full p-2 hover:bg-white/20 transition-colors flex items-center space-x-2 px-3 border border-white/10"
           >
             {isAutoPlay ? <Pause size={16}/> : <Play size={16}/>}
-            <span className='text-sm'>{isAutoPlay ? "Pausar" : "Auto"}</span>
+            <span className='hidden sm:inline text-sm'>{isAutoPlay ? "Pausar" : "Auto"}</span>
           </button>
         </div>
 
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-4 bg-black/30 backdrop-blur-md rounded-full p-2 border border-white/10">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-2 sm:space-x-4 bg-black/30 backdrop-blur-md rounded-full p-2 border border-white/10">
           <button onClick={prevSlide} className="p-2 rounded-full hover:bg-white/20 transition-colors"><ChevronLeft size={20} /></button>
-          <div className="flex space-x-2">
+          <div className="flex space-x-1.5 sm:space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-mmc-gold scale-125' : 'bg-light-gray/70 hover:bg-white'}`}
+                className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-mmc-gold scale-125' : 'bg-light-gray/70 hover:bg-white'}`}
               />
             ))}
           </div>
