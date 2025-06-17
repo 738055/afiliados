@@ -7,6 +7,10 @@ import {
   BedDouble, Car, KeyRound, Briefcase
 } from 'lucide-react';
 
+
+
+import mmcLogo from '/src/assets/logo-mmc.png';
+
 // --- DATA SOURCE FOR THE PRESENTATION ---
 const slides = [
   { id: 'cover', component: 'CoverSlide', background: 'https://images.pexels.com/photos/2363359/pexels-photo-2363359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
@@ -59,7 +63,7 @@ const CoverSlide = () => (
     {/* --- LOGO ADICIONADO AQUI --- */}
     <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
     
-        <img src="/src/assets/logo-mmc.png" alt="MMC Receptivo Logo" className="w-32 h-32 sm:w-48 sm:h-48" />
+     <img src={mmcLogo} alt="MMC Receptivo Logo" className="w-32 h-32 sm:w-48 sm:h-48" />
 
     </motion.div>
     {/* --- FIM DA SEÇÃO DO LOGO --- */}
