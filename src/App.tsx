@@ -9,22 +9,34 @@ import {
 } from 'lucide-react';
 
 
-
-import mmcLogo from '/src/assets/logo-mmc.png';
+import mmcLogo from './assets/logo-mmc.png';
+import fozImg from './assets/foz.jpg';
+import gramadoImg from './assets/gramado.jpg';
+import rioImg from './assets/rio.jpg';
+import img3848 from './assets/IMG_3848.jpeg';
+import img43F4 from './assets/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.jpeg';
+import arquivo009 from './assets/Arquivo_009.jpeg';
+import designSemNome from './assets/Designsemnome.jpg';
+import gramadoVeu from './assets/gramadoveu.jpg';
+import cataratasFalls from "./assets/cataratasfalls.jpeg"; // CORRIGIDO
+import marcoAmericas from './assets/marcoamericas.jpeg';
+import moara from './assets/moara.jpg';
+import moara2 from './assets/moara2.jpg';
+import cataratasDupla from './assets/cataratasdupla.jpeg';
 
 // --- DATA SOURCE FOR THE PRESENTATION ---
 const slides = [
-  { id: 'cover', component: 'CoverSlide', background: 'dist/IMG_3848.JPG' },
-  { id: 'intro', component: 'IntroSlide', background: 'dist/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
-  { id: 'why-mmc', component: 'WhyMmcSlide', background: 'dist/Arquivo_009.jpeg' },
-  { id: 'destinations', component: 'DestinationsSlide', background: 'dist/Designsemnome.jpg' },
-  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: 'dist/gramadoveu.jpg' },
-  { id: 'product-tiers', component: 'ProductTiersDashboard', background: 'dist/designsemnome.jpg' },
-  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: 'dist/cataratasfalls.jpg.jpg' },
-  { id: 'support', component: 'SupportSlide', background: 'dist/marcoamericas.jpeg' },
-  { id: 'faq', component: 'FAQSlide', background: 'dist/moara.jpg' },
-  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: 'dist/moara2.jpg'},
-  { id: 'cta', component: 'CtaSlide', background: 'dist/cataratasdupla.jpg' },
+  { id: 'cover', component: 'CoverSlide', background: img3848 },
+  { id: 'intro', component: 'IntroSlide', background: img43F4 },
+  { id: 'why-mmc', component: 'WhyMmcSlide', background: arquivo009 },
+  { id: 'destinations', component: 'DestinationsSlide', background: designSemNome },
+  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: gramadoVeu },
+  { id: 'product-tiers', component: 'ProductTiersDashboard', background: designSemNome },
+  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: cataratasFalls },
+  { id: 'support', component: 'SupportSlide', background: marcoAmericas },
+  { id: 'faq', component: 'FAQSlide', background: moara },
+  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: moara2 },
+  { id: 'cta', component: 'CtaSlide', background: cataratasDupla },
 ];
 
 // --- ANIMATION VARIANTS ---
@@ -145,9 +157,9 @@ const DestinationsSlide = () => (
     
     <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { img: "dist/foz.jpg", title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
-        { img: "dist/gramado.jpg", title: "Gramado", desc: "Charme Europeu e Gastronomia" },
-        { img: "dist/rio.jpg", title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
+        { img: fozImg, title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
+        { img: gramadoImg, title: "Gramado", desc: "Charme Europeu e Gastronomia" },
+        { img: rioImg, title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
       ].map((dest, i) => (
         <motion.div key={i} variants={itemVariants} whileHover={{ y: -10, scale: 1.03 }} whileTap={{ scale: 0.97 }} className="relative rounded-xl overflow-hidden group shadow-lg sm:shadow-2xl">
           <img src={dest.img} alt={dest.title} className="w-full h-48 sm:h-64 md:h-80 object-cover" loading="lazy" />
