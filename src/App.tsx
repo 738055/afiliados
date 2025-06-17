@@ -14,17 +14,17 @@ import mmcLogo from '/src/assets/logo-mmc.png';
 
 // --- DATA SOURCE FOR THE PRESENTATION ---
 const slides = [
-  { id: 'cover', component: 'CoverSlide', background: '/IMG_3848.JPG' },
-  { id: 'intro', component: 'IntroSlide', background: '/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
-  { id: 'why-mmc', component: 'WhyMmcSlide', background: '/Arquivo_009.jpeg' },
-  { id: 'destinations', component: 'DestinationsSlide', background: '/Designsemnome.jpg' },
-  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: '/gramadoveu.jpg' },
-  { id: 'product-tiers', component: 'ProductTiersDashboard', background: '/designsemnome.jpg' },
-  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: '/cataratasfalls.jpg.jpg' },
-  { id: 'support', component: 'SupportSlide', background: '/marcoamericas.jpeg' },
-  { id: 'faq', component: 'FAQSlide', background: '/moara.jpg' },
-  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: '/moara2.jpg'},
-  { id: 'cta', component: 'CtaSlide', background: '/cataratasdupla.jpg' },
+  { id: 'cover', component: 'CoverSlide', background: 'dist/IMG_3848.JPG' },
+  { id: 'intro', component: 'IntroSlide', background: 'dist/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
+  { id: 'why-mmc', component: 'WhyMmcSlide', background: 'dist/Arquivo_009.jpeg' },
+  { id: 'destinations', component: 'DestinationsSlide', background: 'dist/Designsemnome.jpg' },
+  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: 'dist/gramadoveu.jpg' },
+  { id: 'product-tiers', component: 'ProductTiersDashboard', background: 'dist/designsemnome.jpg' },
+  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: 'dist/cataratasfalls.jpg.jpg' },
+  { id: 'support', component: 'SupportSlide', background: 'dist/marcoamericas.jpeg' },
+  { id: 'faq', component: 'FAQSlide', background: 'dist/moara.jpg' },
+  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: 'dist/moara2.jpg'},
+  { id: 'cta', component: 'CtaSlide', background: 'dist/cataratasdupla.jpg' },
 ];
 
 // --- ANIMATION VARIANTS ---
@@ -145,9 +145,9 @@ const DestinationsSlide = () => (
     
     <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { img: "/public/foz.jpg", title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
-        { img: "/public/gramado.jpg", title: "Gramado", desc: "Charme Europeu e Gastronomia" },
-        { img: "/public/rio.jpg", title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
+        { img: "dist/foz.jpg", title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
+        { img: "dist/gramado.jpg", title: "Gramado", desc: "Charme Europeu e Gastronomia" },
+        { img: "dist/rio.jpg", title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
       ].map((dest, i) => (
         <motion.div key={i} variants={itemVariants} whileHover={{ y: -10, scale: 1.03 }} whileTap={{ scale: 0.97 }} className="relative rounded-xl overflow-hidden group shadow-lg sm:shadow-2xl">
           <img src={dest.img} alt={dest.title} className="w-full h-48 sm:h-64 md:h-80 object-cover" loading="lazy" />
