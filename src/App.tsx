@@ -40,7 +40,7 @@ const Card = ({ children, className = "" }) => (
     <motion.div
         variants={itemVariants}
         whileHover={{ y: -8, boxShadow: "0px 10px 30px -5px rgba(40, 167, 69, 0.3)" }}
-        className={`bg-white/90 backdrop-blur-lg p-6 rounded-xl border border-white/20 text-dark-gray ${className}`}
+        className={`bg-white/90 backdrop-blur-lg p-4 sm:p-6 rounded-xl border border-white/20 text-dark-gray ${className}`}
     >
         {children}
     </motion.div>
@@ -198,16 +198,16 @@ const ProductTiersDashboard = () => {
                         <Card key={tier.name} className="flex flex-col">
                             <div className="flex items-center mb-4">
                                 <tier.icon className={`w-8 h-8 mr-3 ${tier.color}`} />
-                                <h3 className={`font-display text-2xl font-bold ${tier.color}`}>{tier.name} - {tier.commissionRate * 100}%</h3>
+                                <h3 className={`font-display text-xl sm:text-2xl font-bold ${tier.color}`}>{tier.name} - {tier.commissionRate * 100}%</h3>
                             </div>
                             <div className="space-y-3">
                                 {tier.products.map((product, productIndex) => (
                                     <div key={product.id} className="flex items-center justify-between text-sm">
                                         <div>
-                                            <p className="font-semibold">{product.name}</p>
-                                            <p className="text-dark-gray/60">R$ {product.price.toFixed(2)}</p>
+                                            <p className="font-semibold text-left">{product.name}</p>
+                                            <p className="text-dark-gray/60 text-left">R$ {product.price.toFixed(2)}</p>
                                         </div>
-                                        <div className="flex items-center justify-center space-x-2">
+                                        <div className="flex items-center justify-center space-x-1 sm:space-x-2">
                                             <button onClick={() => handleProductChange(tierIndex, productIndex, -1)} className="p-1 rounded-full bg-gray-200 hover:bg-gray-300 transition"><Minus size={14}/></button>
                                             <span className="font-bold text-md w-6 text-center">{product.count}</span>
                                             <button onClick={() => handleProductChange(tierIndex, productIndex, 1)} className="p-1 rounded-full bg-gray-200 hover:bg-gray-300 transition"><Plus size={14}/></button>
