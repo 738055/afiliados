@@ -566,7 +566,7 @@ export default function MmcPresentation() {
             <motion.div
               key={slides[currentSlide].id}
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slides[currentSlide].background})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+              style={{ backgroundImage: `url(${slides[currentSlide].background})`, backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundRepeat: 'no-repeat' }}
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1, transition: { duration: 1.5, ease: 'easeInOut' } }}
               exit={{ opacity: 0 }}
