@@ -4,7 +4,8 @@ import CountUp from 'react-countup';
 import { 
   ChevronLeft, ChevronRight, Play, Pause, MapPin, Award, Star, TrendingUp,
   Users, Link as LinkIcon, PenSquare, BarChart2, DollarSign, ArrowRight, Mail, Phone, Globe, CheckCircle, Plus, Minus, ShieldCheck, Gem, RefreshCw, Send, Handshake,
-  BedDouble, Car, KeyRound, Briefcase
+  BedDouble, Car, KeyRound, Briefcase, Instagram, QrCode, 
+  MessageSquare // <-- Adicione este
 } from 'lucide-react';
 
 
@@ -13,17 +14,17 @@ import mmcLogo from '/src/assets/logo-mmc.png';
 
 // --- DATA SOURCE FOR THE PRESENTATION ---
 const slides = [
-  { id: 'cover', component: 'CoverSlide', background: 'https://images.pexels.com/photos/2363359/pexels-photo-2363359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'intro', component: 'IntroSlide', background: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'why-mmc', component: 'WhyMmcSlide', background: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'destinations', component: 'DestinationsSlide', background: 'https://images.pexels.com/photos/1797223/pexels-photo-1797223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: 'https://images.pexels.com/photos/6476587/pexels-photo-6476587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'product-tiers', component: 'ProductTiersDashboard', background: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'support', component: 'SupportSlide', background: 'https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'faq', component: 'FAQSlide', background: 'https://images.pexels.com/photos/3182830/pexels-photo-3182830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: 'https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
-  { id: 'cta', component: 'CtaSlide', background: 'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
+  { id: 'cover', component: 'CoverSlide', background: '/public/IMG_3848.JPG' },
+  { id: 'intro', component: 'IntroSlide', background: '/public/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
+  { id: 'why-mmc', component: 'WhyMmcSlide', background: '/public/Arquivo_009.jpeg' },
+  { id: 'destinations', component: 'DestinationsSlide', background: '/public/Designsemnome.jpg' },
+  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: '/public/gramadoveu.jpg' },
+  { id: 'product-tiers', component: 'ProductTiersDashboard', background: '/public/designsemnome.jpg' },
+  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: '/public/cataratasfalls.jpg.jpg' },
+  { id: 'support', component: 'SupportSlide', background: '/public/marcoamericas.jpeg' },
+  { id: 'faq', component: 'FAQSlide', background: '/public/moara.jpg' },
+  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: '/public/moara2.jpg'},
+  { id: 'cta', component: 'CtaSlide', background: '/public/cataratasdupla.jpg' },
 ];
 
 // --- ANIMATION VARIANTS ---
@@ -72,7 +73,7 @@ const CoverSlide = () => (
       Programa de Afiliados
     </motion.h1>
     <motion.h2 variants={itemVariants} className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-mmc-green mt-1 sm:mt-2">
-      MMC RECEPTIVO
+      MMC Turismo
     </motion.h2>
     <motion.p variants={itemVariants} className="max-w-3xl text-sm sm:text-lg md:text-xl text-light-gray px-2 mt-4" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>
       Indique experiências turísticas incríveis e ganhe comissões a cada venda.
@@ -97,7 +98,7 @@ const IntroSlide = () => (
       Seja um Parceiro de Sucesso MMC
     </motion.h1>
     <motion.p variants={itemVariants} className="text-sm sm:text-lg text-light-gray mb-4">
-      A <span className="font-semibold text-mmc-green">MMC Receptivo</span>, especialista em criar momentos inesquecíveis nos principais destinos do Brasil, convida você para uma parceria de crescimento mútuo.
+      A <span className="font-semibold text-mmc-green">MMC Turismo</span>, especialista em criar momentos inesquecíveis nos principais destinos do Brasil, convida você para uma parceria de crescimento mútuo.
     </motion.p>
     <motion.p variants={itemVariants} className="text-sm sm:text-lg text-light-gray">
       Transforme sua influência e suas indicações em uma fonte de renda, oferecendo o melhor do turismo nacional.
@@ -144,9 +145,9 @@ const DestinationsSlide = () => (
     
     <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { img: "https://images.pexels.com/photos/164543/pexels-photo-164543.jpeg", title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
-        { img: "https://images.pexels.com/photos/10197711/pexels-photo-10197711.jpeg", title: "Gramado", desc: "Charme Europeu e Gastronomia" },
-        { img: "https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg", title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
+        { img: "/public/foz.jpg", title: "Foz do Iguaçu", desc: "Cataratas, Itaipu e Aventura" },
+        { img: "/public/gramado.jpg", title: "Gramado", desc: "Charme Europeu e Gastronomia" },
+        { img: "/public/rio.jpg", title: "Rio de Janeiro", desc: "Cidade Maravilhosa e seus Encantos" }
       ].map((dest, i) => (
         <motion.div key={i} variants={itemVariants} whileHover={{ y: -10, scale: 1.03 }} whileTap={{ scale: 0.97 }} className="relative rounded-xl overflow-hidden group shadow-lg sm:shadow-2xl">
           <img src={dest.img} alt={dest.title} className="w-full h-48 sm:h-64 md:h-80 object-cover" loading="lazy" />
@@ -268,7 +269,7 @@ const WhoCanBeAffiliateSlide = () => {
         { icon: MapPin, title: "Guias de Turismo" },
         { icon: PenSquare, title: "Blogueiros de Viagem" },
         { icon: Briefcase, title: "Agências de Viagem" },
-        { icon: BedDouble, title: "Hotéis e Pousadas" },
+        { icon: BedDouble, title: "Hotéis, pousadas e AirBnB" },
         { icon: Car, title: "Motoristas de App" },
         { icon: KeyRound, title: "Locadoras de Veículos" },
         { icon: Users, title: "Criadores de Conteúdo" },
@@ -371,7 +372,7 @@ const FAQSlide = () => {
   const faqs = [
     { q: "Como funciona o rastreamento das vendas?", a: "Nosso sistema utiliza cookies para rastrear as vendas. Quando um cliente clica no seu link, um cookie de 30 dias é armazenado no navegador dele, garantindo sua comissão." },
     { q: "Qual o valor mínimo para solicitar o pagamento?", a: "O valor mínimo para resgate das comissões é de R$100,00." },
-    { q: "Como e quando são feitos os pagamentos?", a: "Os pagamentos são processados mensalmente, via transferência bancária ou PIX, após a solicitação em seu painel." },
+    { q: "Como e quando são feitos os pagamentos?", a: "Os pagamentos são processados quinzenalmente, via transferência bancária ou PIX, após a solicitação em seu painel." },
     { q: "Há algum custo para se tornar um afiliado?", a: "Não! O cadastro no nosso programa é 100% gratuito. Você só tem a ganhar." },
   ];
   const [expanded, setExpanded] = useState(null);
@@ -403,21 +404,104 @@ const FAQSlide = () => {
 };
 
 const CtaSlide = () => (
-  <motion.div variants={contentVariants} className="text-center max-w-3xl mx-auto p-4">
-    <motion.div variants={itemVariants} className="w-16 h-16 sm:w-24 sm:h-24 bg-mmc-gold text-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl sm:shadow-2xl">
-      <Star className="w-8 h-8 sm:w-12 sm:h-12" fill="currentColor"/>
-    </motion.div>
-    <motion.h1 variants={itemVariants} className="font-display text-3xl sm:text-5xl font-bold text-white mb-4 sm:mb-6">
-      Seja um Afiliado
+  <motion.div 
+    variants={contentVariants} 
+    className="text-center max-w-5xl mx-auto p-4"
+  >
+    {/* --- TÍTULO --- */}
+    <motion.h1 
+      variants={itemVariants} 
+      className="font-display text-3xl sm:text-5xl font-bold text-white mb-2"
+    >
+      📣 Fale com a Gente!
     </motion.h1>
-    <motion.p variants={itemVariants} className="text-sm sm:text-lg text-light-gray mb-8 sm:mb-12">
-      Comece sua jornada como afiliado MMC Receptivo hoje mesmo. O cadastro é rápido, fácil e gratuito.
+    <motion.p 
+      variants={itemVariants} 
+      className="text-sm sm:text-lg text-light-gray mb-8 sm:mb-12"
+    >
+      Dúvidas? Quer saber mais? Nossa equipe está pronta para ajudar.
     </motion.p>
-    <motion.div variants={itemVariants} className="px-4 sm:px-0">
-      <motion.a href="https://mmcreceptivo.com.br/afiliados" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block bg-mmc-gold text-dark-gray px-6 py-3 sm:px-12 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-yellow-400 transition-colors shadow-md sm:shadow-lg w-full sm:w-auto">
-        QUERO ME CADASTRAR AGORA
-      </motion.a>
+
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+      
+      {/* --- COLUNA ESQUERDA: CONTATOS --- */}
+      <motion.div 
+        variants={contentVariants} 
+        className="flex flex-col space-y-4 text-left w-full md:w-auto"
+      >
+        {/* WhatsApp */}
+        <motion.a 
+          href="https://wa.me/5545999376567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          variants={itemVariants}
+          className="flex items-center gap-3 text-light-gray hover:text-white transition-colors group"
+        >
+          <MessageSquare className="w-6 h-6 text-mmc-green group-hover:scale-110 transition-transform" />
+          <div>
+            <span className="font-semibold text-white">WhatsApp</span>
+            <p className="text-sm">(45) 99937-6567</p>
+          </div>
+        </motion.a>
+
+        {/* Email */}
+        <motion.a 
+          href="mailto:afiliados@mmcreceptivo.com.br"
+          variants={itemVariants}
+          className="flex items-center gap-3 text-light-gray hover:text-white transition-colors group"
+        >
+          <Mail className="w-6 h-6 text-mmc-green group-hover:scale-110 transition-transform" />
+           <div>
+            <span className="font-semibold text-white">Email</span>
+            <p className="text-sm">afiliados@mmcreceptivo.com.br</p>
+          </div>
+        </motion.a>
+
+        {/* Instagram */}
+         <motion.a 
+          href="https://instagram.com/mmcturismo"
+          target="_blank" 
+          rel="noopener noreferrer"
+          variants={itemVariants}
+          className="flex items-center gap-3 text-light-gray hover:text-white transition-colors group"
+        >
+          <Instagram className="w-6 h-6 text-mmc-green group-hover:scale-110 transition-transform" />
+          <div>
+            <span className="font-semibold text-white">Instagram</span>
+            <p className="text-sm">@mmcturismo</p>
+          </div>
+        </motion.a>
+      </motion.div>
+
+      {/* --- COLUNA DIREITA: QR CODE E CTA --- */}
+      <motion.div variants={itemVariants} className="flex flex-col items-center">
+        <div className="bg-white p-3 rounded-xl shadow-2xl">
+           {/* Para o QR Code funcionar, você precisará usar uma biblioteca 
+             como 'qrcode.react' e passar a URL de cadastro.
+             Ex: <QRCode value="https://mmcreceptivo.com.br/afiliados" size={140} />
+             Este é um placeholder visual.
+           */}
+          <QrCode className="w-32 h-32 sm:w-36 sm:h-36 text-dark-gray" />
+        </div>
+        <p className="text-white font-semibold mt-3 text-sm">Escaneie para se cadastrar!</p>
+      </motion.div>
+
+    </div>
+    
+     {/* --- BOTÃO DE CADASTRO PRINCIPAL --- */}
+    <motion.div variants={itemVariants} className="mt-12">
+        <motion.a 
+          href="https://mmcreceptivo.com.br/afiliados"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-block bg-mmc-gold text-dark-gray px-8 py-3 sm:px-12 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+        >
+          QUERO ME CADASTRAR AGORA
+        </motion.a>
     </motion.div>
+
   </motion.div>
 );
 
