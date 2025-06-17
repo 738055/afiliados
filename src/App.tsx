@@ -336,7 +336,7 @@ const CtaSlide = () => (
         <motion.div variants={itemVariants} className="w-24 h-24 bg-mmc-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
             <Star className="w-12 h-12" fill="currentColor"/>
         </motion.div>
-        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">Junte-se ao nosso time!</motion.h1>
+        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">Seja um Afiliado</motion.h1>
         <motion.p variants={itemVariants} className="text-base sm:text-lg text-light-gray mb-12">Comece sua jornada como afiliado MMC Receptivo hoje mesmo. O cadastro é rápido, fácil e gratuito.</motion.p>
         
         <motion.div variants={itemVariants}>
