@@ -443,7 +443,7 @@ const CtaSlide = () => (
       >
         {/* WhatsApp */}
         <motion.a 
-          href="https://wa.me/5545999376567" 
+          href="https://wa.me/+5545991312276" 
           target="_blank" 
           rel="noopener noreferrer"
           variants={itemVariants}
@@ -452,7 +452,7 @@ const CtaSlide = () => (
           <MessageSquare className="w-6 h-6 text-mmc-green group-hover:scale-110 transition-transform" />
           <div>
             <span className="font-semibold text-white">WhatsApp</span>
-            <p className="text-sm">(45) 99937-6567</p>
+            <p className="text-sm">+55 (45) 9131-2276</p>
           </div>
         </motion.a>
 
