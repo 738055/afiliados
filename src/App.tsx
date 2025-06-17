@@ -379,22 +379,23 @@ export default function MmcPresentation() {
 
   return (
     <div id="main-container" className="min-h-screen bg-dark-gray text-white font-sans overflow-hidden">
-      <div className="relative h-screen">
+      <div className="relative h-screen flex flex-col">
         
-        <AnimatePresence>
-            <motion.div
-                key={slides[currentSlide].id}
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1, transition: { duration: 1.5, ease: 'easeInOut' } }}
-                exit={{ opacity: 0 }}
-            />
-        </AnimatePresence>
+        <div className="absolute inset-0">
+            <AnimatePresence>
+                <motion.div
+                    key={slides[currentSlide].id}
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1, transition: { duration: 1.5, ease: 'easeInOut' } }}
+                    exit={{ opacity: 0 }}
+                />
+            </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-to-br from-mmc-green/80 via-dark-gray/80 to-black/95"></div>
+        </div>
         
-        <div className="absolute inset-0 bg-gradient-to-br from-mmc-green/80 via-dark-gray/80 to-black/95"></div>
-        
-        <div className="relative z-10 h-full flex items-center justify-center p-4 md:p-8">
+        <div className="relative z-10 flex-grow flex items-center justify-center overflow-y-auto p-4 md:p-8">
           <div className="w-full max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               <motion.div
@@ -425,19 +426,22 @@ export default function MmcPresentation() {
           </button>
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-2 sm:space-x-4 bg-black/30 backdrop-blur-md rounded-full p-2 border border-white/10">
-          <button onClick={prevSlide} className="p-2 rounded-full hover:bg-white/20 transition-colors"><ChevronLeft size={20} /></button>
-          <div className="flex space-x-1.5 sm:space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-mmc-gold scale-125' : 'bg-light-gray/70 hover:bg-white'}`}
-              />
-            ))}
-          </div>
-          <button onClick={nextSlide} className="p-2 rounded-full hover:bg-white/20 transition-colors"><ChevronRight size={20} /></button>
+        <div className="relative z-20 mt-auto flex-shrink-0">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-4 bg-black/30 backdrop-blur-md rounded-full p-2 border border-white/10 mx-auto my-4 w-fit">
+              <button onClick={prevSlide} className="p-2 rounded-full hover:bg-white/20 transition-colors"><ChevronLeft size={20} /></button>
+              <div className="flex space-x-1.5 sm:space-x-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-mmc-gold scale-125' : 'bg-light-gray/70 hover:bg-white'}`}
+                  />
+                ))}
+              </div>
+              <button onClick={nextSlide} className="p-2 rounded-full hover:bg-white/20 transition-colors"><ChevronRight size={20} /></button>
+            </div>
         </div>
+
       </div>
     </div>
   );
