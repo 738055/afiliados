@@ -14,17 +14,17 @@ import mmcLogo from '/src/assets/logo-mmc.png';
 
 // --- DATA SOURCE FOR THE PRESENTATION ---
 const slides = [
-  { id: 'cover', component: 'CoverSlide', background: '/public/IMG_3848.JPG' },
-  { id: 'intro', component: 'IntroSlide', background: '/public/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
-  { id: 'why-mmc', component: 'WhyMmcSlide', background: '/public/Arquivo_009.jpeg' },
-  { id: 'destinations', component: 'DestinationsSlide', background: '/public/Designsemnome.jpg' },
-  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: '/public/gramadoveu.jpg' },
-  { id: 'product-tiers', component: 'ProductTiersDashboard', background: '/public/designsemnome.jpg' },
-  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: '/public/cataratasfalls.jpg.jpg' },
-  { id: 'support', component: 'SupportSlide', background: '/public/marcoamericas.jpeg' },
-  { id: 'faq', component: 'FAQSlide', background: '/public/moara.jpg' },
-  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: '/public/moara2.jpg'},
-  { id: 'cta', component: 'CtaSlide', background: '/public/cataratasdupla.jpg' },
+  { id: 'cover', component: 'CoverSlide', background: '/IMG_3848.JPG' },
+  { id: 'intro', component: 'IntroSlide', background: '/43F45E7F-CE78-4C2E-B1DA-05C4C9052368.JPG' },
+  { id: 'why-mmc', component: 'WhyMmcSlide', background: '/Arquivo_009.jpeg' },
+  { id: 'destinations', component: 'DestinationsSlide', background: '/Designsemnome.jpg' },
+  { id: 'how-it-works', component: 'HowItWorksDashboardSlide', background: '/gramadoveu.jpg' },
+  { id: 'product-tiers', component: 'ProductTiersDashboard', background: '/designsemnome.jpg' },
+  { id: 'who-can-be', component: 'WhoCanBeAffiliateSlide', background: '/cataratasfalls.jpg.jpg' },
+  { id: 'support', component: 'SupportSlide', background: '/marcoamericas.jpeg' },
+  { id: 'faq', component: 'FAQSlide', background: '/moara.jpg' },
+  { id: 'join-us-cycle', component: 'JoinUsCycleSlide', background: '/moara2.jpg'},
+  { id: 'cta', component: 'CtaSlide', background: '/cataratasdupla.jpg' },
 ];
 
 // --- ANIMATION VARIANTS ---
